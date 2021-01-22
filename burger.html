@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>burger</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <style>
+        .body-div{
+            width: 100%;
+            height: 100vh;
+            background-image: url(./images/Rectangle.png);
+        }
+        .brand-logo{
+            height: 60px;
+            width: 250px;
+            object-fit:scale-down;
+        } 
+        .navbar-list{
+            font-size: 21px;
+            letter-spacing: 2px;
+            color: #3d2514;
+            font-weight: 500;
+            font-family: "Bebas Neue";
+        }
+        .small-title {
+            font-size: 24px;
+            line-height: 33px;
+            color: #3d2514;
+            font-weight: 100;
+            font-family: "Bebas Neue";
+            border: black dotted 1px;
+            margin-top: 30px;
+        } 
+        .topleft-col{
+            padding-top: 120px;
+        }
+        .big-title{
+            font-size: 100px;
+            color: #3d2514;
+            font-weight: 300;
+            font-family: "Alfa Slab One";
+            filter: drop-shadow(3.936px 4.528px 0px #fee8bc);
+            
+        }
+        .last-title{
+            font-size: 40px;
+            line-height: 62px;
+            color: #3d2514;
+            font-weight: 200;
+            font-family: "Alfa Slab One";
+            filter: drop-shadow(3.936px 4.528px 0px #fee8bc);
+        }
+        .price-offer{
+            position: absolute;
+            left:50px;
+            top: 360px;
+            width:85px;
+            height:85px;
+            background-color: rgba(235, 32, 32, 0.801);
+            border-radius: 40px;
+            border: white dotted 2px;
+            text-align: center;
+            padding-top: 12px;
+        } 
+        .left-div{   
+            padding-right: 20px;
+        }
+        .left-div-text{
+            position: absolute;
+            left: 10%;
+            top: 10%;
+        }
+        .left-div-text > h3{
+            font-size: 25px;
+            color: #ffffff;
+            letter-spacing: 3px;
+            font-weight: 500;
+            font-family: "Bebas Neue";
+        }
+        .left-div-text > h6{
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: 500;
+            font-family: "Bebas Neue";
+        }
+        .left-upper-img{
+            position: relative;
+        }
+        .left-lower-img{
+            position: relative;
+        }
+        .left-text {
+             position: absolute;
+             left: 10%;
+             top: 10%;   
+        }
+        .left-text > h6{
+                font-size: 20px;
+                color: #ffffff;
+                font-weight: 500;
+                font-family: "Bebas Neue";
+        }
+        .left-text > h4{
+                font-size: 25px;
+                letter-spacing: 2px;
+                color: #ffffff;
+                font-weight: 700;
+                font-family: "Bebas Neue";
+        }
+         .section-3>h4{
+                font-size: 30px;
+                font-weight: 400;
+        }
+        .section-3 > span {
+            font-size: 20px;
+            line-height: 38px;
+            color: #3d2514;
+            font-weight: 500;
+            font-family: "Bebas Neue";
+            width: 218px;
+            height: 48px;
+            background-color: #ffc045;
+            
+        }
+        .section-3  > p {
+            width: 1082px;
+            height: 56px;
+            font-size: 17px;
+            line-height: 29px;
+            color: #3d2514;
+            font-weight: 400;
+            font-family: "Montserrat";
+            text-align: center;
+        }
+        .section-4-div > p {
+            width: 367px;
+            height: 51px;
+            font-size: 17px;
+            line-height: 21px;
+            color: #3d2514;
+            font-weight: 400;
+            font-family: "Montserrat";
+            text-align: center;
+        }
+        .section-4-div> h4{
+            font-size: 38px;
+            line-height: 38px;
+            color: #3d2514;
+            font-weight: 500;
+            font-family: "Bebas Neue";
+        }
+        .section-4-div > img {
+            height: 400px;
+            object-fit: scale-down;
+        }
+        .section-4-div > button{
+            border-radius: 0;
+            background-color: #bf2222;
+            font-size: 17px;
+            line-height: 38px;
+            color: #ffffff;
+            font-weight: 200;
+            font-family: "Alfa Slab One";
+        }
+        .s5-outer-div{
+            width :50px;
+            height: 100pc;
+            background-color: rgb(78, 80, 82);
+
+        }
+        .s5-row{
+            margin-top: 150px;
+        }
+        .s5-left-col> h6 {
+            font-size: 29px;
+            letter-spacing: 2px;
+            line-height: 46px;
+            color: #3d3d3d;
+            font-weight: 700;
+            font-family: "Bebas Neue";
+
+        }
+        .s5-left-col> h4{
+            font-size: 42px;
+            line-height: 46px;
+            color: #3d2514;
+            font-weight: 400;
+            font-family: "Alfa Slab One";
+        }
+        .s5-left-col> p{
+            text-align: justify;
+            font-size: 21px;
+            line-height: 33px;
+            color: #3d3d3d;
+            font-weight: 400;
+            font-family: "Montserrat";
+        }
+        .section-6{
+            background-image: url("./images/s6-burger-pic.png");
+            background-position:center;
+            padding-top: 70px;
+        }
+        .section6-col> h6{
+            font-size: 29px;
+            letter-spacing: 2px;
+            line-height: 46px;
+            color: #3d2514;
+            font-weight: 700;
+            font-family: "Bebas Neue";
+        }
+        .section6-col> h4{
+            font-size: 50px;
+            letter-spacing: 3px;
+            line-height: 46px;
+            color: #3d2514;
+            font-weight: 400;
+            font-family: "Alfa Slab One";
+        }  
+        .section6-form > input{ 
+            border-radius: 5px;
+            background-color: rgba(143, 124, 94, 0);
+            border: 1px solid #bebebe;
+            margin-bottom: 20px !important;
+            font-size: 21px;
+
+            color: #3d3d3d;
+            font-weight: 400;
+            font-family: "Bebas Neue";
+        }
+        .section-7{
+            background-image:url("images/Place\ Your\ Design.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .section7-left-div> p {
+            width: 520px;
+            height: 106px;
+            font-size: 17px;
+            line-height: 25px;
+            color: #ffffff;
+            font-weight: 400;
+            font-family: "Montserrat";
+            margin-top: 130px;
+        }
+        .sectin7-left-div>im5g{
+            margin-bottom: 30px;
+        }
+        .section7-right-div>span{
+            font-size: 21px;
+            line-height: 38px;
+            color: #ffffff;
+            font-weight: 500;
+            font-family: "Bebas Neue";
+            
+        }
+        .section7-right-div > .email-address {
+            font-size: 21px;
+            line-height: 38px;
+            color: #ffffff;
+            font-weight: 500;
+            font-family: "Bebas Neue";
+            text-align: right 100px;
+            
+        }
+        .section7-right-div{
+            padding-left: 150px !important;
+        }
+        .icon-div{
+            margin-top:330px ;
+        
+        }
+        .icon-ul{
+            margin-left: 350px!important;
+            list-style: none;
+        }    
+        .icon-ul>li{
+           display: inline;
+           margin-left: 10px;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="body-div">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"><img class="brand-logo" src="./images/Place Your Logo Here (Double Click to Edit).png" alt=""></a>
+              
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                  <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-list">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">MENU<span class="sr-only">(current)</span></a>
+                      </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"> OUR STORY<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">CONTACT US <span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    
+                  </ul>
+            </nav>
+            <div class="row no-gutters burger-pic">
+                    <div class="col-6 topleft-col">
+                        <span class="small-title p-2">It is a good time for the great taste of burgers</span>
+                        <h1 class="big-title mb-0">BURGER</h1>
+                        <span class="last-title">WEEK</span>
+                    </div>
+                    <div class="col-6">
+                        <img class="burger-img img-fluid" src="./images/burger.png" alt="">
+                        <div class="price-offer">
+                            <h6>$5.49</h6>
+                            <p>ONLY</p>
+                        </div>
+                    </div>
+                   
+            </div>
+        </div>
+    </div> 
+    <!--SECTION 2 START-->
+    <div class="container">
+        <div class="row no-gutters mt-5">
+        
+            <div class="col-6 left-div pr-3">
+                <img class="img-fluid" src=".//images/Burger Image (2).png" alt="">
+                <div class="left-div-text">
+                    <h6>TRY IT TODAY</h6>
+                    <h3>MOST POPULAR BURGER</h3>
+                </div>
+            </div>
+    
+             <div class="col-6 right-div pl-3">
+                 
+                <div class="left-upper-img">
+                    <img class="picture1 img-fluid mb-4"src=".//images/burger Image (3).png" alt="">
+                    <div class="left-text">
+                        <h6>TRY IT TODAY</h6>
+                        <h4>MORE FUN</h4>  
+                        <h4>MORE TASTE</h4>
+                    </div>
+                
+                </div>
+                <div class="left-lower-img">
+                    <img class="picture2 img-fluid" src=".//images/burger Image (4).png" alt="" >
+                    <div class="left-text">
+                        <h6>TRY IT TODAY</h6>
+                        <h4>FRESH $ CHILI </h4>  
+                        
+                    </div>
+                </div>
+               
+             </div>   
+                
+        </div>
+    </div>
+    <!--SECTION 2 END-->
+
+    <!--Section 3 start-->
+    <div class="row no-gutters">
+        <div class="container">
+            <div class="col-12  section-3 text-center pt-5">
+                <span class="pl-2 pr-2">Always Tasty Burger</span>
+                <h4 class="big-title mt-3">CHOOSE & ENJOY</h4>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+            </div>
+        </div>
+    </div>
+    <!--Section 3 end-->
+
+   
+    <!--section 4 start-->
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-4 text-center section-4-div">
+                <img class="img-fluid" src=".//images/s-4-burger-1.png" alt="" >
+                <h4>Lorem ipsum dolor</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                <button class="btn btn-danger btn-lg">ORDER NOW</button>
+            </div>
+
+            <div class="col-4 text-center section-4-div">
+                <img class="img-fluid" src=".//images/s-4-burger-2.png" alt="">
+                <h4>Lorem ipsum dolor</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                <button class="btn btn-danger btn-lg">ORDER NOW</button>
+            </div>
+
+            <div class="col-4 text-center section-4-div">
+                <img class="img-fluid" src=".//images/s-4-burger-1.png" alt="" >
+                <h4>Lorem ipsum dolor</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                <button class="btn btn-danger btn-lg">ORDER NOW</button>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+    <!--section 4 end-->
+
+    <!--section 5 start-->
+        <div class="container">
+            <div class="row no-gutters ">
+                <div class="col-12  rounded shadow-lg p-5 s5-row">
+                    <div class="row">
+                        <div class="col-6 s5-left-col p-4">
+                            <h6>DISCOVER</h6>
+                            <h4>UPCOMING EVENTS</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                            
+                        </div>
+                        <div class="col-6 p-4 mt-5">
+                            <img class="img-fluid " src=".//images/s-5-burger.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     <!--section 5 end-->
+
+     <!-- section 6 start -->
+     <section class="section-6">
+         <div class="container">
+             <div class="row no-gutters mb-5 pb-5">
+                 <div class="col-12 section6-col text-center">
+                     <h6>RESERVATION</h6>
+                     <h4>BOOK YOUR TABLE</h4>  
+                 </div>
+             </div>
+             <di-v class="row justify-content-center no-gutters section6-form mt-5">
+                 <div class="col-4 mr-4 section6-form">
+                    <input class="form-control form-control-lg" type="text" placeholder="NAME" aria-label="default input example">
+                    <input class="form-control form-control-lg" type="text" placeholder="DATE" aria-label="default input example">
+                    <input class="form-control form-control-lg" type="text" placeholder="PEOPLE" aria-label="default input example">
+                 </div>
+                 <div class="col-4 section6-form"> 
+                    <input class="form-control form-control-lg" type="text" placeholder="E-MAIL" aria-label="default input example">
+                    <input class="form-control form-control-lg" type="text" placeholder="TIME" aria-label="default input example">
+                    <button type="button" class="btn btn-danger btn-block">FIND A TABLE</button>
+                 </div>
+             </div>
+
+         </div>
+     </section>
+     <!-- section 6 end -->
+
+      <!-- section 7 strat -->
+     <section class="section-7" >
+        <div class="row no-gutters ml-5">
+            <div class="col-6 section7-left-div pt-5">
+                <img src="./images/logo2.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viver ra maecenas accumsan lacus vel facilisis.</p>
+                <p>© Company Name 2020. All rights reserved.</p>
+            </div>
+            <div class="col-6 section7-right-div mt-5 pt-5" >
+               <span>
+                   <i class="fas fa-map-marker-alt mr-2"></i>
+                   Main Road, Building Name, Country
+              </span> 
+              <div class="email-address">
+                <i class="fas fa-envelope mr-2"></i>
+                info@companyname.com
+                <div class="icon-div">
+                    <ul class="icon-ul">
+                        <li><i class="fas fa-camera"></i></li>
+                       <li> <i class="fab fa-facebook"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-whatsapp"></i></li>
+                    </ul>
+                    
+                </div>
+
+          
+              </div>
+                
+              
+
+            </div>
+        </div>
+
+
+     </section>
+
+       <!-- section 7 end -->
+</body>
+</html>
